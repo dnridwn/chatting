@@ -1,20 +1,62 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Chatting
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="success">
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="success">
+        <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment color="success" [(ngModel)]="activeSegment" (ionChange)="segmentChanged()">
+      <ion-segment-button value="chats">Chats</ion-segment-button>
+      <ion-segment-button value="status">Status</ion-segment-button>
+      <!-- <ion-segment-button value="calls">Calls</ion-segment-button> -->
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-slides #slider (ionSlideWillChange)="slideChanged()">
+    <!-- HOME CHAT -->
+    <ion-slide>
+      <app-chat-list [chatList]="chatList"></app-chat-list>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="success">
+          <ion-icon name="chatbubble-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-slide>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <!-- HOME STATUS -->
+    <ion-slide class="slide-status">
+      <app-status-item
+        pictureUrl="https://akcdn.detik.net.id/visual/2014/10/06/c29fe95e-6b83-4bcd-8d66-27d628e97499_169.jpg?w=650"
+        displayName="My Status"
+        description="Tap to add status update"
+        [isReadAll]="true"
+        [showAddButton]="true">
+      </app-status-item>
+      <h6 class="status-sub-title">Recent updates</h6>
+      <app-status-list [statusList]="recentStatusList"></app-status-list>
+      <h6 class="status-sub-title">Viewed updates</h6>
+      <app-status-list [statusList]="viewedStatusList"></app-status-list>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="success" class="fab-pencil">
+          <ion-icon name="pencil-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="success">
+          <ion-icon name="camera-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-slide>
+
+    <!-- HOME CALLS -->
+    <!-- <ion-slide></ion-slide> -->
+  </ion-slides>
 </ion-content>

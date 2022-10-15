@@ -1,27 +1,27 @@
-#container {
-  text-align: center;
+ion-slides {
+    display: block;
+    height: 100%;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+    ion-slide {
+        display: block;
+        text-align: left;
+    }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.status-sub-title {
+    margin: 12px 0px 0px 16px;
+    color: var(--ion-color-medium);
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.slide-status {
+    padding-top: 12px;
 }
 
-#container a {
-  text-decoration: none;
+ion-fab-button {
+    margin-right: 12px;
+    margin-bottom: 24px;
+}
+
+.fab-pencil {
+    margin-bottom: 12px;
 }

@@ -1,0 +1,13 @@
+<ion-item lines="none" class="ion-activatable ripple-parent" button>
+  <ion-avatar slot="start">
+    <img [src]="pictureUrl" alt="avatar" [ngClass]="{ 'border-success': !isReadAll && !showAddButton, 'border-medium': isReadAll && !showAddButton }">
+    <div class="button-add-container" *ngIf="showAddButton">
+      <ion-icon color="success" name="add-circle"></ion-icon>
+    </div>
+  </ion-avatar>
+  <div class="status-info">
+    <h6 class="status-person-name">{{ displayName }}</h6>
+    <p class="time-info">{{ description }}</p>
+  </div>
+  <ion-ripple-effect></ion-ripple-effect>
+</ion-item>

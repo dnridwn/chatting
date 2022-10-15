@@ -1,0 +1,9 @@
+<ion-list>
+  <app-status-item *ngFor="let statusItem of statusList"
+    [pictureUrl]="statusItem.pictureUrl"
+    [displayName]="statusItem.displayName"
+    [description]="statusItem.description"
+    [isReadAll]="statusItem.isReadAll"
+    [showAddButton]="statusItem.showAddButton">
+  </app-status-item>
+</ion-list>

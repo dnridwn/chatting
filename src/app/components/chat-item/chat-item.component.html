@@ -1,0 +1,16 @@
+<ion-item lines="none" class="ion-activatable ripple-parent" button>
+  <ion-avatar slot="start">
+    <img [src]="pictureUrl" alt="avatar">
+  </ion-avatar>
+  <div class="chat-info">
+    <h6 class="chat-person-name">{{ displayName }}</h6>
+    <p class="chat-last-message">{{ lastMessage }}</p>
+  </div>
+  <div>
+    <span class="time-info">{{ displayTime }}</span>
+    <ion-badge [color]="unreadMessageCount > 0 ? 'success' : 'translucent'">
+      {{ unreadMessageCount > 0 ? unreadMessageCount : '' }}
+    </ion-badge>
+  </div>
+  <ion-ripple-effect></ion-ripple-effect>
+</ion-item>

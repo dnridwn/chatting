@@ -1,0 +1,10 @@
+<ion-list>
+  <app-chat-item *ngFor="let chatItem of chatList"
+    [pictureUrl]="chatItem.pictureUrl"
+    [displayName]="chatItem.displayName"
+    [lastMessage]="chatItem.lastMessage"
+    [displayTime]="chatItem.displayTime"
+    [unreadMessageCount]="chatItem.unreadMessageCount"
+    (click)="chatItem.onClick()">
+  </app-chat-item>
+</ion-list>
