@@ -107,4 +107,11 @@ export class HomePage {
     this.activeSegment = this.segments[index];
   }
 
+  /**
+   * Open page
+   */
+  openPage(pagePath) {
+    this.navCtrl.navigateForward(pagePath);
+  }
+
 }

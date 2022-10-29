@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { ChatListComponent } from './chat-list/chat-list.component';
 import { ChatItemComponent } from './chat-item/chat-item.component';
 import { BubbleChatComponent } from './bubble-chat/bubble-chat.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { ContactItemComponent } from './contact-item/contact-item.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { BubbleChatComponent } from './bubble-chat/bubble-chat.component';
     ChatItemComponent,
     StatusListComponent,
     StatusItemComponent,
-    BubbleChatComponent
+    BubbleChatComponent,
+    ContactListComponent,
+    ContactItemComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +28,9 @@ import { BubbleChatComponent } from './bubble-chat/bubble-chat.component';
     ChatItemComponent,
     StatusListComponent,
     StatusItemComponent,
-    BubbleChatComponent
+    BubbleChatComponent,
+    ContactListComponent,
+    ContactItemComponent
   ]
 })
 export class ComponentsModule { }

@@ -1,0 +1,6 @@
+<ion-list>
+  <app-contact-item *ngFor="let contact of contactList"
+    [displayName]="contact.displayName"
+    [pictureUrl]="contact.pictureUrl">
+  </app-contact-item>
+</ion-list>

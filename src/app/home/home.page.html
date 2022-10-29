@@ -27,7 +27,7 @@
     <ion-slide>
       <app-chat-list [chatList]="chatList"></app-chat-list>
       <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button color="success">
+        <ion-fab-button color="success" (click)="openPage('contacts')">
           <ion-icon name="chatbubble-outline"></ion-icon>
         </ion-fab-button>
       </ion-fab>
