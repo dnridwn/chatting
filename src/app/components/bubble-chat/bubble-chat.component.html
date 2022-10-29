@@ -1,8 +1,13 @@
 <div class="container" [ngClass]="{ 'right-bubble': position == 'right', 'left-bubble': position == 'left'}">
   <div class="inner-container">
-    <span *ngIf="type == 'text'">{{ text }}</span>
-    <span *ngIf="type == 'image'">
-      <img [src]="imageUrl" alt="IMAGE">
-    </span>
+    <div class="content-container">
+      <span *ngIf="type == 'text'">{{ text }}</span>
+      <span *ngIf="type == 'image'">
+        <img [src]="imageUrl" alt="IMAGE">
+      </span>
+    </div>
+    <div class="time-container">
+      <span class="time">{{ time }}</span>
+    </div>
   </div>
 </div>

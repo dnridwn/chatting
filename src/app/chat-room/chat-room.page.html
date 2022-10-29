@@ -20,7 +20,7 @@
 
 <ion-content [fullscreen]="true">
   <div class="container">
-    <app-bubble-chat *ngFor="let message of messages" [type]="message.type" [text]="message.text" [imageUrl]="message.imageUrl" [position]="message.position"></app-bubble-chat>
+    <app-bubble-chat *ngFor="let message of messages" [type]="message.type" [time]="message.time" [text]="message.text" [imageUrl]="message.imageUrl" [position]="message.position"></app-bubble-chat>
 
     <div class="chat-textfield">
       <div class="input-area">

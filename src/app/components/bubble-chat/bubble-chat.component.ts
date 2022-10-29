@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BubbleChatComponent implements OnInit {
 
   @Input() type: string;
+  @Input() time: string;
   @Input() text: string;
   @Input() position: string;
   @Input() imageUrl: string;
