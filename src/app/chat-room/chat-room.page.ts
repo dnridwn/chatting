@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { AttachmentModalComponent } from '../components/attachment-modal/attachment-modal.component';
 
 @Component({
   selector: 'app-chat-room',
@@ -13,7 +15,8 @@ export class ChatRoomPage implements OnInit {
   public messages: any[] = [];
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
@@ -68,6 +71,21 @@ export class ChatRoomPage implements OnInit {
     });
 
     this.inputText = '';
+  }
+
+  /**
+   * Open attachment modal
+   */
+  openAttachmentModal() {
+    this.modalCtrl.create({
+      component: AttachmentModalComponent,
+      breakpoints: [0, 0.25],
+      initialBreakpoint: 0.25,
+      showBackdrop: true
+    })
+    .then(modal => {
+      modal.present();
+    });
   }
 
 }

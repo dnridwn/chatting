@@ -28,7 +28,7 @@
           <ion-icon slot="icon-only" color="medium" name="happy-outline"></ion-icon>
         </ion-button>
         <ion-input type="text" placeholder="Enter message..." [(ngModel)]="inputText"></ion-input>
-        <ion-button class="input-area-button" fill="clear">
+        <ion-button class="input-area-button" fill="clear" (click)="openAttachmentModal()">
           <ion-icon slot="icon-only" color="medium" name="attach-outline"></ion-icon>
         </ion-button>
         <ion-button class="input-area-button" fill="clear">
