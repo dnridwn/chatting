@@ -1,0 +1,8 @@
+<div class="container" [ngClass]="{ 'right-bubble': position == 'right', 'left-bubble': position == 'left'}">
+  <div class="inner-container">
+    <span *ngIf="type == 'text'">{{ text }}</span>
+    <span *ngIf="type == 'image'">
+      <img [src]="imageUrl" alt="IMAGE">
+    </span>
+  </div>
+</div>

@@ -5,14 +5,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChatListComponent } from './chat-list/chat-list.component';
 import { ChatItemComponent } from './chat-item/chat-item.component';
-
+import { BubbleChatComponent } from './bubble-chat/bubble-chat.component';
 
 @NgModule({
   declarations: [
     ChatListComponent,
     ChatItemComponent,
     StatusListComponent,
-    StatusItemComponent
+    StatusItemComponent,
+    BubbleChatComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +23,8 @@ import { ChatItemComponent } from './chat-item/chat-item.component';
     ChatListComponent,
     ChatItemComponent,
     StatusListComponent,
-    StatusItemComponent
+    StatusItemComponent,
+    BubbleChatComponent
   ]
 })
 export class ComponentsModule { }

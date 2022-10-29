@@ -20,6 +20,8 @@
 
 <ion-content [fullscreen]="true">
   <div class="container">
+    <app-bubble-chat *ngFor="let message of messages" [type]="message.type" [text]="message.text" [imageUrl]="message.imageUrl" [position]="message.position"></app-bubble-chat>
+
     <div class="chat-textfield">
       <div class="input-area">
         <ion-button class="input-area-button" fill="clear">
@@ -33,7 +35,7 @@
           <ion-icon slot="icon-only" color="medium" name="camera-outline"></ion-icon>
         </ion-button>
       </div>
-      <ion-button color="success" class="button-send">
+      <ion-button color="success" class="button-send" (click)="send()">
         <ion-icon slot="icon-only" [name]="inputText.length > 0 ? 'send' : 'mic'"></ion-icon>
       </ion-button>
     </div>
